@@ -1,14 +1,14 @@
 import Component from '../Component.js';
-import monsterItem from './monsterItem.js';
+import MonsterItem from './MonsterItem.js';
 
-class monsterList extends Component {
+class MonsterList extends Component {
     
     onRender(dom) {
         const monsters = this.props.monsters;
 
         monsters.forEach(monster => {
             const props = { monster: monster };
-            const monsterItem = new monsterItem(props);
+            const monsterItem = new MonsterItem(props);
             const monsterItemDOM = monsterItem.renderDOM();
             dom.appendChild(monsterItemDOM);
         });
@@ -23,4 +23,4 @@ class monsterList extends Component {
     }
 }
 
-export default monsterList;
+export default MonsterList;
