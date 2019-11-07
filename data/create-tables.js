@@ -19,7 +19,14 @@ async function run() {
     
         // run a query to create tables
         await client.query(`
-          
+            CREATE TABLE monsters (
+                id SERIAL PRIMARY KEY NOT NULL,
+                name VARCHAR(256) NOT NULL,
+                alignment VARCHAR(256) NOT NULL,
+                url VARCHAR(256) NOT NULL,
+                hp INTEGER NOT NULL,
+                is_legendary BOOLEAN NOT NULL
+            );
         `);
 
         console.log('create tables complete');
