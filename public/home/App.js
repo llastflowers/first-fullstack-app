@@ -11,7 +11,6 @@ class App extends Component {
     renderHTML() {
         return /*html*/`
             <div>
-                <!-- header goes here -->
                 <main>
                     <p>Main App Page</p>
                 </main>
