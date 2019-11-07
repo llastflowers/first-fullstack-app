@@ -1,19 +1,20 @@
 import Component from '../Component.js';
 import Header from '../common/Header.js';
+import MonsterList from '../monster-list/monsterList.js';
 import { getMonsters } from '../services/monsters-api.js';
 
 class MonsterListApp extends Component {
 
     onRender(dom) {
-        const header = new Header({ title: 'List of Cats' });
+        const header = new Header({ title: 'List of Monsters' });
         dom.prepend(header.renderDOM());
 
-        const list = new CatList({ cats: [] });
+        const list = new MonsterList({ monsters: [] });
         const main = dom.querySelector('main');
         main.appendChild(list.renderDOM());
 
-        getCats().then(cats => {
-            list.update({ cats });
+        getMonsters().then(monsters => {
+            list.update({ monsters });
         });
     }
 
@@ -27,4 +28,4 @@ class MonsterListApp extends Component {
     }
 }
 
-export default CatListApp;
+export default MonsterListApp;
