@@ -49,29 +49,29 @@ class MonsterForm extends Component {
         return /*html*/`
             <form class="monster-form">
                 <p>
-                    <label for="name">Name</label>
+                    <label for="name">Name:</label>
                     <input id="name" name="name">
                 </p>
                 <p>
-                    <label for="alignment">Alignment</label>
+                    <label for="alignment">Alignment:</label>
                     <select id="alignment" name="alignment-id" required>
                         <option disabled selected>Select Alignment</option>
                         ${joinedOptionsList}
                     </select>
                 </p>
                 <p>
-                    <label for="url">Image URL</label>
+                    <label for="url">Image URL:</label>
                     <input id="url" name="url">
                 </p>
                 <p>
-                    <label for="hp">HP</label>
+                    <label for="hp">HP:</label>
                     <span class="horizontally-centered">
-                        <input id="hp" name="hp" type="range" min="0" max="400" value="400" step="10">
-                    <span id="hp-display">5</span>
+                        <input id="hp" name="hp" type="range" min="0" max="400" value="0" step="10">
+                    <span id="hp-display"></span>
                     </span>
                 </p>
                     <fieldset for="is-legendary">
-                        <legend>Is the monster Legendary?</legend>
+                        <legend>Legendary?</legend>
                         <label class="horizontally-centered">
                         <input id="is-legendary" name="is-legendary" type="checkbox"> Yes
                         </label>

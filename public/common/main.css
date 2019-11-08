@@ -55,6 +55,7 @@ form {
     padding: 30px;
     border-radius: 20px;
     width: 400px;
+    margin: 5% auto;
 }
 
 input {
@@ -74,28 +75,47 @@ select {
     padding-left: 10px;
 }
 
+label {
+    padding-right: 10px;
+}
+
+label.horizontally-centered {
+    display: flex;
+    align-items: center;
+}
+
 #name {
-    margin: 10px;
+    margin: 10px auto;
 }
 
 #alignment {
-    margin: 10px;
+    margin: 10px auto;
 }
 
 #url {
-    margin: 10px;
+    margin: 10px auto;
 }
 
 #hp {
     margin: 10px auto;
 }
 
-#is-legendary{
+input#is-legendary {
+    width: 30px;
+    margin: 20px 10px 10px 0;
+}
+
+input#hp {
+    width: 250px;
+}
+
+.is-legendary {
     margin: 10px auto;
 }
 
 .add-monster {
     margin: 10px auto;
+
 }
 
 .home-image {
