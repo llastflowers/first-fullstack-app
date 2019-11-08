@@ -70,14 +70,14 @@ class MonsterForm extends Component {
                     <span id="hp-display"></span>
                     </span>
                 </p>
-                    <fieldset for="is-legendary">
+                    <fieldset for="is-legendary" class="is-legendary">
                         <legend>Legendary?</legend>
                         <label class="horizontally-centered">
                         <input id="is-legendary" name="is-legendary" type="checkbox"> Yes
                         </label>
                     </fieldset>
                 <p>
-                    <button>Add Monster</button>
+                    <button id="add-monster">Add Monster</button>
                 </p>
             </form>
         `;

@@ -60,10 +60,10 @@ form {
 
 input {
     height: 30px;
-    width: 200px;
     border-radius: 5px;
     border: 1px solid black;
 }
+
 
 select {
     height: 30px;
@@ -86,14 +86,17 @@ label.horizontally-centered {
 
 #name {
     margin: 10px auto;
+    width: 260px;
 }
 
 #alignment {
     margin: 10px auto;
+    width: 223px;
 }
 
 #url {
     margin: 10px auto;
+    width: 211px;
 }
 
 #hp {
@@ -113,8 +116,10 @@ input#hp {
     margin: 10px auto;
 }
 
-.add-monster {
-    margin: 10px auto;
+#add-monster {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 
 }
 
