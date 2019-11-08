@@ -22,7 +22,7 @@ async function run() {
                     VALUES ($1, $2, $3, $4, $5);
                 `,
 
-                [monster.name, monster.alignmnet, monster.url, monster.hp, monster.isLegendary]);
+                [monster.name, monster.alignment, monster.url, monster.hp, monster.isLegendary]);
                 
             })
         );
