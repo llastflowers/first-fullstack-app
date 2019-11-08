@@ -87,6 +87,7 @@ label.horizontally-centered {
 #name {
     margin: 10px auto;
     width: 260px;
+    padding: 10px;
 }
 
 #alignment {
@@ -97,6 +98,7 @@ label.horizontally-centered {
 #url {
     margin: 10px auto;
     width: 211px;
+    padding: 10px;
 }
 
 #hp {
