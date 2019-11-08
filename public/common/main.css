@@ -50,6 +50,81 @@ a:active {
     justify-content: center;
 }
 
+form {
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 20px;
+    width: 400px;
+    margin: 10% auto;
+}
+
+input {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+
+select {
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background: white;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+label {
+    padding-right: 10px;
+}
+
+label.horizontally-centered {
+    display: flex;
+    align-items: center;
+}
+
+#name {
+    margin: 10px auto;
+    width: 260px;
+    padding: 10px;
+}
+
+#alignment {
+    margin: 10px auto;
+    width: 223px;
+}
+
+#url {
+    margin: 10px auto;
+    width: 211px;
+    padding: 10px;
+}
+
+#hp {
+    margin: 10px auto;
+}
+
+input#is-legendary {
+    width: 30px;
+    margin: 20px 10px 10px 0;
+}
+
+input#hp {
+    width: 250px;
+}
+
+.is-legendary {
+    margin: 10px auto;
+}
+
+#add-monster {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+
 .home-image {
     width: 970px;
     display: flex;
@@ -66,6 +141,7 @@ button {
     background-color: black;
     border-radius: 10px;
     border: black;
+    font-size: 25px;
 }
 
 button:hover {
