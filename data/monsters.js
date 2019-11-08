@@ -40,7 +40,7 @@ module.exports = [
         hp: 4,
         isLegendary: false,
         alignment: 'Neutral',
-        url: './public/assets/giant-centipede.jpg',
+        url: 'assets/giant-centipede.jpg',
     },
     {
         name: 'Hill Giant',
