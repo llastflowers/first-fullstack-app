@@ -12,9 +12,9 @@ class MonsterItem extends Component {
                 <div class="image-container">
                     <img src="${monster.url}" alt="${monster.name} image">
                 </div>
-                <p class="monster-hp">${monster.hp}</p>
-                <p class="monster-alignment">${monster.alignment}</p>
-                <p class="monster-is-legendary">${monster.isLegendary}</p>
+                <p class="monster-hp">HP: ${monster.hp}</p>
+                <p class="monster-alignment">Alignment: ${monster.alignment}</p>
+                <p class="monster-is-legendary">Legendary: ${monster.isLegendary}</p>
             </li>
         `;
     }
