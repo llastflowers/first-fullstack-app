@@ -36,9 +36,9 @@ app.get('/api/monsters', async(req, res) => {
                 url,
                 is_legendary as "isLegendary",
                 alignment
-            FROM MONSTERS;
+            FROM monsters;
         `);
-
+console.log(result.rows);
         res.json(result.rows);
     }
     catch (err) {
