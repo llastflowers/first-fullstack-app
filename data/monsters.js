@@ -12,28 +12,28 @@ module.exports = [
         hp: 243,
         isLegendary: true,
         alignment: 'Lawful Good',
-        url: './public/assets/adult-silver-dragon.jpeg',
+        url: 'assets/adult-silver-dragon.jpeg',
     },
     {
         name: 'Ancient Black Dragon',
         hp: 367,
         isLegendary: true,
         alignment: 'Chaotic Evil',
-        url: './public/assets/ancient-black-dragon.jpg',
+        url: 'assets/ancient-black-dragon.jpg',
     },
     {
         name: 'Death Dog',
         hp: 39,
         isLegendary: false,
         alignment: 'Neutral Evil',
-        url: '../public/assets/death-dog2.jpg',
+        url: 'assets/death-dog2.jpg',
     },
     {
         name: 'Dryad',
         hp: 22,
         isLegendary: false,
         alignment: 'Neutral',
-        url: '../public/assets/dryad2.jpg',
+        url: 'assets/dryad2.jpg',
     },
     {
         name: 'Giant Centipede',
@@ -47,14 +47,14 @@ module.exports = [
         hp: 105,
         isLegendary: false,
         alignment: 'Chaotic Evil',
-        url: './public/assets/hill-giant.jpeg',
+        url: 'assets/hill-giant.jpeg',
     },
     {
         name: 'Tyrannosaurus Rex',
         hp: 136,
         isLegendary: false,
         alignment: 'Unaligned',
-        url: './public/assets/t-rex.png',
+        url: 'assets/t-rex.png',
     }
 
 ];
