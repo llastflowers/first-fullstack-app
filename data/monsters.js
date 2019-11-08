@@ -5,7 +5,7 @@ module.exports = [
         hp: 225,
         isLegendary: true,
         alignment: 'Lawful Evil',
-        url: './public/assets/adult-blue-dragon.jpg',
+        url: 'assets/adult-blue-dragon.jpg',
     },
     {
         name: 'Adult Silver Dragon',
