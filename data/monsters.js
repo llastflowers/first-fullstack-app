@@ -54,7 +54,7 @@ module.exports = [
         hp: 136,
         isLegendary: false,
         alignment: 'Unaligned',
-        url: '../public/assets/t-rex.png',
+        url: '../public/assets/',
     }
 
 ];

@@ -6,7 +6,7 @@ import { getMonsters } from '../services/monsters-api.js';
 class MonsterListApp extends Component {
 
     onRender(dom) {
-        const header = new Header({ title: 'Dnd Monsters' });
+        const header = new Header({ title: 'D&D MONSTERS' });
         dom.prepend(header.renderDOM());
 
         const list = new MonsterList({ monsters: [] });
