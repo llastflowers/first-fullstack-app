@@ -26,35 +26,35 @@ module.exports = [
         hp: 39,
         isLegendary: false,
         alignment: 'Neutral Evil',
-        url: '../public/assets/',
+        url: '../public/assets/death-dog2.jpg',
     },
     {
         name: 'Dryad',
         hp: 22,
         isLegendary: false,
         alignment: 'Neutral',
-        url: '../public/assets/',
+        url: '../public/assets/dryad2.jpg',
     },
     {
         name: 'Giant Centipede',
         hp: 4,
         isLegendary: false,
         alignment: 'Neutral',
-        url: '../public/assets/',
+        url: '../public/assets/giant-centipede.jpg',
     },
     {
         name: 'Hill Giant',
         hp: 105,
         isLegendary: false,
         alignment: 'Chaotic Evil',
-        url: '../public/assets/',
+        url: '../public/assets/hill-giant.jpeg',
     },
     {
         name: 'Tyrannosaurus Rex',
         hp: 136,
         isLegendary: false,
         alignment: 'Unaligned',
-        url: '../public/assets/',
+        url: '../public/assets/t-rex.png',
     }
 
 ];
