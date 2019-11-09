@@ -1,4 +1,3 @@
-
 module.exports = [
     {
         name: 'Adult Blue Dragon',
