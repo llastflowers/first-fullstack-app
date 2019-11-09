@@ -19,7 +19,6 @@ class MonsterFormApp extends Component {
     renderHTML() {
         return /*html*/`
             <div>
-                <!-- header goes here -->
                 <main>
                     
                 </main>
