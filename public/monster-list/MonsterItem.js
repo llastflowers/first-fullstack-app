@@ -20,4 +20,4 @@ class MonsterItem extends Component {
     }
 }
 
-export default MonsterItem;
+export default MonsterItem; 
