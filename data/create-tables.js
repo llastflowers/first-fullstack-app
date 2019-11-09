@@ -27,9 +27,17 @@ async function run() {
                 hp INTEGER NOT NULL,
                 is_legendary BOOLEAN NOT NULL
             );
+<<<<<<< HEAD
             CREATE TABLE alignments (
                 id SERIAL PRIMARY KEY NOT NULL,
                 alignment VARCHAR(256) NOT NULL
+=======
+
+            CREATE TABLE alignment (
+                id SERIAL PRIMARY KEY NOT NULL,
+                alignment VARCHAR(256) NOT NULL,
+
+>>>>>>> dev
             );
         `);
 
