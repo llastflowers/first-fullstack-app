@@ -29,7 +29,7 @@ async function run() {
                 alignments_id INTEGER NOT NULL REFERENCES alignments(id),
                 url VARCHAR(256) NOT NULL,
                 hp INTEGER NOT NULL,
-                islegendary BOOLEAN NOT NULL
+                is_legendary BOOLEAN NOT NULL
             );
         `);
 
