@@ -6,7 +6,7 @@ import { getOneMonster } from '../services/monsters-api.js';
 class MonsterFormApp extends Component {
 
     async onRender(dom) {
-        const header = new Header({ title: 'TEST' });
+        const header = new Header({ title: 'D&D MONSTERS' });
         dom.prepend(header.renderDOM());
 
         const main = dom.querySelector('main');
