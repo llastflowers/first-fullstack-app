@@ -25,7 +25,7 @@ module.exports = [
         hp: 39,
         isLegendary: false,
         alignment: 'Neutral Evil',
-        url: 'assets/death-dog2.jpg',
+        url: 'assets/death-dog2.jpeg',
     },
     {
         name: 'Dryad',
