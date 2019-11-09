@@ -28,7 +28,7 @@ async function run() {
                 is_legendary BOOLEAN NOT NULL
             );
 
-            CREATE TABLE alignment (
+            CREATE TABLE alignments (
                 id SERIAL PRIMARY KEY NOT NULL,
                 alignment VARCHAR(256) NOT NULL
             );
