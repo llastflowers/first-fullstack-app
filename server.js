@@ -30,14 +30,14 @@ app.get('/api/monsters', async(req, res) => {
     try {
         const result = await client.query(`
             SELECT
-                id,
-                name,
-                hp,
-                url,
-                is_legendary as "isLegendary",
-                alignment
-            FROM monsters;
+                c.*,
+                t.name as type
+            FROM cats c
+            JOIN types t
+            ON   c.type_id = t.id
+            ORDER BY c.year;
         `);
+        
 console.log(result.rows);
         res.json(result.rows);
     }
