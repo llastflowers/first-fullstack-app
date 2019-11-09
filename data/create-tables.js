@@ -27,6 +27,10 @@ async function run() {
                 hp INTEGER NOT NULL,
                 is_legendary BOOLEAN NOT NULL
             );
+            CREATE TABLE alignments (
+                id SERIAL PRIMARY KEY NOT NULL,
+                alignment VARCHAR(256) NOT NULL
+            );
         `);
 
         console.log('create tables complete');
