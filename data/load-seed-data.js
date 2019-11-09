@@ -3,11 +3,7 @@ const pg = require('pg');
 const Client = pg.Client;
 // import seed data:
 const monsters = require('./monsters');
-<<<<<<< HEAD
 const alignments = require('./alignments');
-=======
-const alignment = require('./alignment');
->>>>>>> dev
 
 run();
 
@@ -31,28 +27,18 @@ async function run() {
                 
             })
         );
-        alignment.map(alignment => {
 
-<<<<<<< HEAD
         alignments.map(alignment => {
 
-=======
->>>>>>> dev
             return client.query(`
                 INSERT INTO alignment (alignment)
                 VALUES ($1);
             `,
 
-<<<<<<< HEAD
             [alignment.alignment]);
             
         });
-
-=======
-            [alignment.name, alignment.alignment]);
-            
-        });
->>>>>>> dev
+    
         console.log('seed data load complete');
     }
     catch (err) {
