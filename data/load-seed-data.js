@@ -3,7 +3,7 @@ const pg = require('pg');
 const Client = pg.Client;
 // import seed data:
 const monsters = require('./monsters');
-const alignments = require('./alignment');
+const alignments = require('./alignments');
 
 run();
 
