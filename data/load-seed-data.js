@@ -33,7 +33,7 @@ async function run() {
                 const alignId = alignmentArray.id;
 
                 return client.query(`
-                    INSERT INTO monsters (name, alignments_id, url, hp, isLegendary)
+                    INSERT INTO monsters (name, alignments_id, url, hp, islegendary)
                     VALUES ($1, $2, $3, $4, $5);
                 `,
                 [monster.name, alignId, monster.url, monster.hp, monster.isLegendary]);
