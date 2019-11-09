@@ -21,6 +21,7 @@ const PORT = process.env.PORT;
 app.use(morgan('dev')); // http logging
 app.use(cors()); // enable CORS request
 app.use(express.static('public')); // server files from /public folder
+app.use(express.json());
 
 
 // API Routes
@@ -30,15 +31,15 @@ app.get('/api/monsters', async(req, res) => {
     try {
         const result = await client.query(`
             SELECT
-                id,
-                name,
-                hp,
-                url,
-                is_legendary as "isLegendary",
-                alignment
-            FROM monsters;
+                m.*,
+                a.*
+            FROM monsters m
+            JOIN alignments a
+            ON   m.alignments_id = a.id
+            ORDER BY m.hp;
         `);
-console.log(result.rows);
+        
+
         res.json(result.rows);
     }
     catch (err) {
