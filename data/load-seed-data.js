@@ -3,7 +3,7 @@ const pg = require('pg');
 const Client = pg.Client;
 // import seed data:
 const monsters = require('./monsters');
-//const alignments = require('./alignments');
+const alignments = require('./alignments');
 
 run();
 
@@ -12,35 +12,36 @@ async function run() {
 
     try {
         await client.connect();
-    
-        // "Promise all" does a parallel execution of async tasks
+
+        const savedAlignments = await Promise.all(
+            alignments.map(async alignment => {
+                const result = await client.query(`
+                    INSERT INTO alignments (alignment)
+                    VALUES ($1)
+                    RETURNING *;
+                `,
+                [alignment]);
+                return result.rows[0];
+            })
+        );
+        
         await Promise.all(
-            // map every item in the array data
             monsters.map(monster => {
+                const alignment = savedAlignments.find(alignment => {
+                    return alignment.alignment === monster.alignment;
+                });
+                const alignId = alignment.id;
 
                 return client.query(`
-                    INSERT INTO monsters (name, alignment, url, hp, is_legendary)
+                    INSERT INTO monsters (name, alignment_id, url, hp, is_legendary)
                     VALUES ($1, $2, $3, $4, $5);
                 `,
-
-                [monster.name, monster.alignment, monster.url, monster.hp, monster.isLegendary]);
-                
+                [monster.name, alignId, monster.url, monster.hp, monster.isLegendary]);
             })
-    
-            // alignments.map(alignment => {
+        );
 
-            //     return client.query(`
-            //         INSERT INTO alignments (alignment)
-            //         VALUES ($1);
-            //     `,
-            //     [alignment.alignment]);           
-            // }
-        )
-        ;
-
-
-    
         console.log('seed data load complete');
+        
     }
     catch (err) {
         console.log(err);
@@ -48,5 +49,35 @@ async function run() {
     finally {
         client.end();
     }
+
+} //end run function
+//     try {
+//         await client.connect();
     
-}
+//         // "Promise all" does a parallel execution of async tasks
+//         await Promise.all(
+//             // map every item in the array data
+//             monsters.map(monster => {
+
+//                 return client.query(`
+//                     INSERT INTO monsters (name, alignment, url, hp, is_legendary)
+//                     VALUES ($1, $2, $3, $4, $5);
+//                 `,
+
+//                 [monster.name, monster.alignment, monster.url, monster.hp, monster.isLegendary]);
+                
+//             })
+//         );
+
+
+    
+//         console.log('seed data load complete');
+//     }
+//     catch (err) {
+//         console.log(err);
+//     }
+//     finally {
+//         client.end();
+//     }
+    
+// 
