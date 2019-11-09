@@ -11,9 +11,9 @@ class App extends Component {
     renderHTML() {
         return /*html*/`
             <div>
-                <!-- header goes here -->
                 <main>
-                    <p>Main App Page</p>
+                    <img class="home-image" src="/assets/home-image.jpg">
+                    <a href="./monster-list.html"><button class="enter">Click to Enter</button></a>
                 </main>
             </div>
         `;
