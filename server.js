@@ -32,7 +32,7 @@ app.get('/api/monsters', async(req, res) => {
         const result = await client.query(`
             SELECT
                 m.*,
-                a.alignments as alignment
+                a.name as alignment
             FROM monsters m
             JOIN alignments a
             ON   m.alignments_id = a.id
