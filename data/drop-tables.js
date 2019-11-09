@@ -12,6 +12,7 @@ async function run() {
     
         await client.query(`
         DROP TABLE IF EXISTS monsters;
+        DROP TABLE IF EXISTS alignment;
         `);
 
         console.log('drop tables complete');
