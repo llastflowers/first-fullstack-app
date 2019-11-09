@@ -31,7 +31,7 @@ async function run() {
         alignments.map(alignment => {
 
             return client.query(`
-                INSERT INTO alignments (alignments)
+                INSERT INTO alignments (alignment)
                 VALUES ($1);
             `,
             [alignment.alignment]);           
