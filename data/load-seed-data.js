@@ -3,7 +3,7 @@ const pg = require('pg');
 const Client = pg.Client;
 // import seed data:
 const monsters = require('./monsters');
-const alignments = require('./alignments');
+//const alignments = require('./alignments');
 
 run();
 
@@ -26,16 +26,19 @@ async function run() {
                 [monster.name, monster.alignment, monster.url, monster.hp, monster.isLegendary]);
                 
             })
-        );
+    
+            // alignments.map(alignment => {
 
-        alignments.map(alignment => {
+            //     return client.query(`
+            //         INSERT INTO alignments (alignment)
+            //         VALUES ($1);
+            //     `,
+            //     [alignment.alignment]);           
+            // }
+        )
+        ;
 
-            return client.query(`
-                INSERT INTO alignments (alignment)
-                VALUES ($1);
-            `,
-            [alignment.alignment]);           
-        });
+
     
         console.log('seed data load complete');
     }
