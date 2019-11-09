@@ -27,10 +27,10 @@ async function run() {
         
         await Promise.all(
             monsters.map(monster => {
-                const alignment = savedAlignments.find(alignment => {
-                    return alignment.alignment === monster.alignment;
+                const alignmentArray = savedAlignments.find(row => {
+                    return row.alignment === monster.alignment;
                 });
-                const alignId = alignment.id;
+                const alignId = alignmentArray.id;
 
                 return client.query(`
                     INSERT INTO monsters (name, alignment_id, url, hp, is_legendary)
@@ -41,7 +41,7 @@ async function run() {
         );
 
         console.log('seed data load complete');
-        
+
     }
     catch (err) {
         console.log(err);
