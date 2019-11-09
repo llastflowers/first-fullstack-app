@@ -31,12 +31,10 @@ async function run() {
         alignments.map(alignment => {
 
             return client.query(`
-                INSERT INTO alignment (alignment)
+                INSERT INTO alignments (alignments)
                 VALUES ($1);
             `,
-
-            [alignment.alignment]);
-            
+            [alignment.alignment]);           
         });
     
         console.log('seed data load complete');
