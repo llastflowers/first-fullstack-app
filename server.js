@@ -33,7 +33,7 @@ app.get('/api/monsters', async(req, res) => {
         SELECT
             m.id, m.name, m.url, m.hp, 
             m.is_legendary as "isLegendary",
-            a.alignment
+            a.*
         FROM monsters m
         JOIN alignments a
         ON   m.alignments_id = a.id
