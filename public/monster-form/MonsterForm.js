@@ -37,7 +37,7 @@ class MonsterForm extends Component {
     }//ends event listener
 
     renderHTML() {
-        const alignments = this.props.alignment;
+        const alignments = this.props.alignments;
         const optionsList = alignments.map(alignment => {
             return `<option value=${alignment}</option>`;
         });
