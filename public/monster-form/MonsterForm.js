@@ -25,9 +25,7 @@ class MonsterForm extends Component {
 
             try {
                 const saved = await addMonster(monster);
-                console.log(saved);
-
-                window.location = `monster-list.html`;
+                window.location = `monster-detail.html?id=${saved.id}`;
             }
             catch (err) {
                 console.log('monster not saved', err);
