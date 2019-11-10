@@ -50,6 +50,45 @@ app.get('/api/monsters', async(req, res) => {
     }
 
 });
+app.post('api/monsters', async(req, res) => {
+    const monster = req.body;
+
+    try {
+        const result = await client.query(`
+        INSERT INTO monsters (name, url, hp, is_legendary, alignment_id)
+        VALUES ($1, $2, $3, $4, $5)
+        RETURNING *;
+        `,
+        [monster.name, monster.url, monster.hp, monster.isLegendary, monster.alignmentId]
+        );
+
+        res.json(result.rows[0]);
+    }
+    catch (err) {
+        console.log(err);
+        res.status(500).json({
+            error: err.message || err
+        });
+    }
+});
+
+app.get('/api/alignments', async(req, res) => {
+    try {
+        const result = await client.query(`
+            SELECT *
+            FROM alignments
+            ORDER by id;
+        `);
+        res.json(result.rows);
+    }
+    catch (err) {
+        console.log(err);
+        res.status(500).json({
+            error: err.message || err
+        });
+    }
+});
+
 
 // http method and path...
 
