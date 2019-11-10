@@ -8,8 +8,6 @@ export async function getMonsters() {
     return data;
 }
 
-
-
 export async function getOneMonster(id) {
     const url = `${URL}/monsters/${id}`;
     const response = await fetch(url);

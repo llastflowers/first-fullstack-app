@@ -11,10 +11,14 @@ class MonsterFormApp extends Component {
 
         const main = dom.querySelector('main');
 
-        //this needs to push results of getAlignments() into DOM
-        const alignments = await getAlignments();
+    
+
         const monsterForm = new MonsterForm({ alignments });
         main.appendChild(monsterForm.renderDOM());
+
+            //this needs to push results of getAlignments() into DOM
+        const alignments = await getAlignments();
+
     }
 
     renderHTML() {
