@@ -17,7 +17,7 @@ class MonsterForm extends Component {
 
             const monster = {
                 name: formData.get('name'),
-                alignmentId: parseInt(formData.get('alignment-id')),
+                alignment: parseInt(formData.get('alignment')),
                 url: formData.get('url'), //??? url from form or response from server?
                 hp: parseInt(formData.get('hp')),
                 isLegendary: formData.get('is-legendary') === 'on'
@@ -52,7 +52,7 @@ class MonsterForm extends Component {
                 </p>
                 <p>
                     <label for="alignment">Alignment:</label>
-                    <select id="alignment" name="alignment-id" required>
+                    <select id="alignment" name="alignment" required>
                         <option disabled selected>Select Alignment</option>
                         ${optionsList}
                     </select>
