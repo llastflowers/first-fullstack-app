@@ -17,7 +17,7 @@ class MonsterForm extends Component {
 
             const monster = {
                 name: formData.get('name'),
-                alignmentId: parseInt(formData.get('alignment-id')),
+                alignments_id: parseInt(formData.get('alignment-id')),
                 url: formData.get('url'), //??? url from form or response from server?
                 hp: parseInt(formData.get('hp')),
                 isLegendary: formData.get('is-legendary') === 'on'
