@@ -30,13 +30,14 @@ app.get('/api/monsters', async(req, res) => {
 
     try {
         const result = await client.query(`
-            SELECT
-                m.*,
-                a.*
-            FROM monsters m
-            JOIN alignments a
-            ON   m.alignments_id = a.id
-            ORDER BY m.hp;
+        SELECT
+            m.id, m.name, m.url, m.hp, 
+            m.is_legendary as "isLegendary",
+            a.alignment
+        FROM monsters m
+        JOIN alignments a
+        ON   m.alignments_id = a.id
+        ORDER BY m.hp;
         `);
         
 
@@ -55,3 +56,13 @@ app.get('/api/monsters', async(req, res) => {
 app.listen(PORT, () => {
     console.log('server running on PORT', PORT);
 });
+
+/* 
+SELECT
+                m.*,
+                a.*
+            FROM monsters m
+            JOIN alignments a
+            ON   m.alignments_id = a.id
+            ORDER BY m.hp;
+            */
