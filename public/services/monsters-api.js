@@ -8,14 +8,7 @@ export async function getMonsters() {
     return data;
 }
 
-//hits alignment endpoint
-export async function getAlignments() {
-    const url = `${URL}/alignments`;
 
-    const response = await fetch(url);
-    const data = await response.json();
-    return data;
-}
 
 export async function getOneMonster(id) {
     const url = `${URL}/monsters/${id}`;
@@ -35,6 +28,15 @@ export async function addMonster(monster) {
         body: JSON.stringify(monster)
     });
 
+    const data = await response.json();
+    return data;
+}
+
+//hits alignment endpoint
+export async function getAlignments() {
+    const url = `${URL}/alignments`;
+
+    const response = await fetch(url);
     const data = await response.json();
     return data;
 }
