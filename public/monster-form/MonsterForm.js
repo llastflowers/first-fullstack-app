@@ -39,10 +39,10 @@ class MonsterForm extends Component {
     renderHTML() {
         const alignments = this.props.alignments;
         const optionsList = alignments.map(alignment => {
-            return `<option value="${alignment.id}">${alignment.name}</option>`;
+            return `<option value=${alignment.name}</option>`;
         });
 
-        const joinedOptionsList = optionsList.join('');
+        //const joinedOptionsList = optionsList.join('');
 
         return /*html*/`
             <form class="monster-form">
@@ -54,7 +54,7 @@ class MonsterForm extends Component {
                     <label for="alignment">Alignment:</label>
                     <select id="alignment" name="alignment-id" required>
                         <option disabled selected>Select Alignment</option>
-                        ${joinedOptionsList}
+                        ${optionsList}
                     </select>
                 </p>
                 <p>

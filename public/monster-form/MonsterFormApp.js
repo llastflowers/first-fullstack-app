@@ -1,7 +1,7 @@
 import Component from '../Component.js';
 import Header from '../common/Header.js';
 import MonsterForm from './MonsterForm.js';
-import { getAlignment } from '../services/monsters-api.js';
+import { getAlignments } from '../services/monsters-api.js';
 
 class MonsterFormApp extends Component {
 
@@ -11,7 +11,8 @@ class MonsterFormApp extends Component {
 
         const main = dom.querySelector('main');
 
-        const alignments = await getAlignment();
+        //this needs to push results of getAlignments() into DOM
+        const alignments = await getAlignments();
         const monsterForm = new MonsterForm({ alignments });
         main.appendChild(monsterForm.renderDOM());
     }
