@@ -17,7 +17,7 @@ class MonsterForm extends Component {
 
             const monster = {
                 name: formData.get('name'),
-                typeId: parseInt(formData.get('alignment-id')),
+                alignmentId: parseInt(formData.get('alignment-id')),
                 url: formData.get('url'), //??? url from form or response from server?
                 hp: parseInt(formData.get('hp')),
                 isLegendary: formData.get('is-legendary') === 'on'
@@ -43,8 +43,6 @@ class MonsterForm extends Component {
         });
 
         const joinedOptionsList = optionsList.join('');
-
-        console.log(joinedOptionsList);
 
         return /*html*/`
             <form class="monster-form">

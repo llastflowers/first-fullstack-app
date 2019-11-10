@@ -8,11 +8,22 @@ export async function getMonsters() {
     return data;
 }
 
-export function getOneMonster(id) {  
-    const url = `${URL}/monsters/${id}`;
-    return fetch(url)
-        .then(response => response.json());
+//hits alignment endpoint
+export async function getAlignment() {
+    const url = `${URL}/alignments`;
+
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
 }
+
+
+//this one is not wired to anything
+// export function getOneMonster(id) {  
+//     const url = `${URL}/monsters/${id}`;
+//     return fetch(url)
+//         .then(response => response.json());
+// }
 
 export async function addMonster(monster) {
     const url = `${URL}/monsters`;
