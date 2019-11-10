@@ -53,7 +53,7 @@ class MonsterForm extends Component {
                 <p>
                     <label for="alignment">Alignment:</label>
                     <select id="alignment" name="alignment" required>
-                        <option disabled selected>Select Alignment<option>
+                        <option disabled selected>Select Alignment</option>
                         ${optionsList}
                     </select>
                 </p>
