@@ -61,7 +61,7 @@ class MonsterForm extends Component {
                 <p>
                     <label for="hp">HP:</label>
                     <span class="horizontally-centered">
-                        <input id="hp" name="hp" type="range" min="0" max="400" value="0" step="10">
+                        <input id="hp" name="hp" type="range" min="0" max="500" value="0" step="10">
                     <span id="hp-display"></span>
                     </span>
                 </p>
