@@ -6,6 +6,7 @@ class MonsterItem extends Component {
 
         return /*html*/`
             <li class="monster-item">
+            <a href="monster-detail.html?id=${monster.id}">
                     <h2>${monster.name}</h2>
                 <div class="image-container">
                     <img src="${monster.url}" alt="${monster.name} image">
