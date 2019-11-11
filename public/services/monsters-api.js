@@ -14,6 +14,15 @@ export async function getOneMonster(id) {
     return data;
 }
 
+//hits alignment endpoint
+export async function getAlignments() {
+    const url = `${URL}/alignments`;
+
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+}
+
 export async function addMonster(monster) {
     const url = `${URL}/monsters`;
 //the following line is giving error?
@@ -26,15 +35,6 @@ export async function addMonster(monster) {
     });
 
     const data = await response.json();
-    console.log(data);
-    return data;
-}
-
-//hits alignment endpoint
-export async function getAlignments() {
-    const url = `${URL}/alignments`;
-
-    const response = await fetch(url);
-    const data = await response.json();
+    console.log('hi' + data);
     return data;
 }

@@ -24,7 +24,6 @@ class MonsterForm extends Component {
             };
             
             try {
-                console.log(monster);
                 const saved = await addMonster(monster);
 
                 window.location = `monster-detail.html?id=${saved.id}`;
