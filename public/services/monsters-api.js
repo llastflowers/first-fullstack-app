@@ -19,7 +19,7 @@ export async function addMonster(monster) {
     const url = `${URL}/monsters`;
 //the following line is giving error?
     const response = await fetch(url, {
-        method: 'POST',
+        method: 'post',
         headers: {
             'Content-Type': 'application/json',
         },
