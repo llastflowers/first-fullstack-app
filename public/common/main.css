@@ -229,6 +229,4 @@ ul {
     display: flex;
     align-content: center;
     opacity: 0.9;
-    position: absolute;
-    top: 35vh;
 }
