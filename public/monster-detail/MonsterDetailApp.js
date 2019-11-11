@@ -40,6 +40,7 @@ class MonsterDetailApp extends Component {
             <div>
                 <!-- header goes here -->
                 <main class="detail">
+                    <h3>Monster Detail</h3>
                 </main>
             </div>
         `;
