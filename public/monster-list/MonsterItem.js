@@ -5,8 +5,7 @@ class MonsterItem extends Component {
         const monster = this.props.monster;
 
         return /*html*/`
-            <li class="monster-item">
-                <a href="monster-detail.html?id=${monster.id}"></a>
+            <a href="monster-detail.html?id=${monster.id}"><li class="monster-item">
                     <h2>${monster.name}</h2>
                 <div class="image-container">
                     <img src="${monster.url}" alt="${monster.name} image">
@@ -16,7 +15,7 @@ class MonsterItem extends Component {
                     <p class="monster-alignment">Alignment: ${monster.alignment}</p>
                     <p class="monster-is-legendary">Legendary: ${monster.isLegendary}</p>
                 </div>
-            </li>
+            </li></a>
         `;
     }
 }
