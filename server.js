@@ -62,7 +62,7 @@ app.get('api/monsters/:id', async(req, res) => {
             a.*
         FROM monsters m
         JOIN alignments a
-        ON   m.alignments_id = a.id as "alignmentId"
+        ON   m.alignments_id = a.id
         WHERE m.id = 1;
     `,
         [id]);
