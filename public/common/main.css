@@ -206,6 +206,7 @@ ul {
 }
 
 .loading-container {
+    width: 200px;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -213,6 +214,6 @@ ul {
 }
 
 .loading-container img {
-    width: 300px;
+    width: 200px;
     border-radius: 100%;
 }
