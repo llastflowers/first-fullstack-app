@@ -206,7 +206,7 @@ ul {
 }
 
 .loading-container {
-    width: 200px;
+    width: 100px;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -214,6 +214,19 @@ ul {
 }
 
 .loading-container img {
-    width: 200px;
+    width: 150px;
     border-radius: 100%;
+    margin: 15% auto;
+    display: flex;
+    align-content: center;
+    opacity: 0.9;
+}
+
+.loading {
+    width: 150px;
+    border-radius: 100%;
+    margin: 15% auto;
+    display: flex;
+    align-content: center;
+    opacity: 0.9;
 }
