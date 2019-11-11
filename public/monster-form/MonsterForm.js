@@ -41,8 +41,6 @@ class MonsterForm extends Component {
             return `<option value="${alignment.id}">${alignment.alignment}</option>`;
         });
 
-        //const joinedOptionsList = optionsList.join('');
-
         return /*html*/`
             <form class="monster-form">
                 <p>

@@ -25,7 +25,6 @@ export async function getAlignments() {
 
 export async function addMonster(monster) {
     const url = `${URL}/monsters`;
-//the following line is giving error?
     const response = await fetch(url, {
         method: 'POST',
         headers: {
@@ -35,6 +34,5 @@ export async function addMonster(monster) {
     });
 
     const data = await response.json();
-    console.log('hi' + data);
     return data;
 }
