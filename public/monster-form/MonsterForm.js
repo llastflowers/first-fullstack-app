@@ -17,7 +17,7 @@ class MonsterForm extends Component {
 
             const monster = {
                 name: formData.get('name'),
-                alignmentId: parseInt(formData.get('alignId')), //check that this is right
+                alignmentId: parseInt(formData.get('alignment')), //check that this is right
                 url: formData.get('url'), 
                 hp: parseInt(formData.get('hp')),
                 isLegendary: formData.get('is-legendary') === 'on'
@@ -37,7 +37,7 @@ class MonsterForm extends Component {
     renderHTML() {
         const alignments = this.props.alignments;
         const optionsList = alignments.map(alignment => {
-            return `<option alignId="${alignment.id}">${alignment.alignment}</option>`;
+            return `<option value="${alignment.id}">${alignment.alignment}</option>`;
         });
 
         //const joinedOptionsList = optionsList.join('');
