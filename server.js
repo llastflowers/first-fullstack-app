@@ -90,7 +90,7 @@ app.post('api/monsters', async(req, res) => {
 
     try {
         const result = await client.query(`
-        INSERT INTO monsters (name, url, hp, is_legendary, alignments_id)
+        INSERT INTO monsters (name, url, hp, is_legendary, alignments_Id)
         VALUES ($1, $2, $3, $4, $5)
         RETURNING *;
         `,
