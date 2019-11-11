@@ -17,12 +17,12 @@ class MonsterForm extends Component {
 
             const monster = {
                 name: formData.get('name'),
-                alignmentId: parseInt(formData.get('alignment')), //check that this is right
+                alignmentId: parseInt(formData.get('alignment').value), //check that this is right
                 url: formData.get('url'), 
                 hp: parseInt(formData.get('hp')),
                 isLegendary: formData.get('is-legendary') === 'on'
             };
-
+            console.log(monster);
             try {
                 const saved = await addMonster(monster);
                 window.location = `monster-detail.html?id=${saved.id}`;
