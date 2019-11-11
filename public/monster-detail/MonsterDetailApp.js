@@ -16,8 +16,8 @@ class MonsterDetailApp extends Component {
         //main.appendChild(loading.renderDOM());
 
         const searchParams = new URLSearchParams(window.location.search);
-        
-        const id = searchParams.get('id');
+        console.log (searchParams);
+        let id = searchParams.get('id');
         console.log (id);
         if (!id) {
             window.location = 'monster-list.html';
