@@ -85,7 +85,7 @@ app.get('/api/monsters/:id', async(req, res) => {
     }
 });
 
-app.post('api/monsters', async(req, res) => {
+app.post('/api/monsters', async(req, res) => {
     const monster = req.body;
 
     try {
