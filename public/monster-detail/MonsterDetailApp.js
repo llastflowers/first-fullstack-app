@@ -36,10 +36,21 @@ class MonsterDetailApp extends Component {
     }
 
     renderHTML() {
+        const monster = this.props.monster;
+
         return /*html*/`
-            <div>
+            <div class="monster-item">
                 <!-- header goes here -->
                 <main>
+                <h2>${monster.name}</h2>
+                <div class="image-container">
+                    <img src="${monster.url}" alt="${monster.name} image">
+                </div>
+                <div class="info-container">
+                    <p class="monster-hp">HP: ${monster.hp}</p>
+                    <p class="monster-alignment">Alignment: ${monster.alignment}</p>
+                    <p class="monster-is-legendary">Legendary: ${monster.isLegendary}</p>
+                </div>
                 </main>
             </div>
         `;
