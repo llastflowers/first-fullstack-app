@@ -51,7 +51,7 @@ app.get('/api/monsters', async(req, res) => {
 
 });
 
-app.get('api/monsters/:id', async(req, res) => {
+app.get('/api/monsters/:id', async(req, res) => {
     const id = req.params.id;
 
     try {
