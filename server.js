@@ -127,13 +127,3 @@ app.get('/api/alignments', async(req, res) => {
 app.listen(PORT, () => {
     console.log('server running on PORT', PORT);
 });
-
-/* 
-SELECT
-                m.*,
-                a.*
-            FROM monsters m
-            JOIN alignments a
-            ON   m.alignments_id = a.id
-            ORDER BY m.hp;
-            */
