@@ -222,3 +222,8 @@ ul {
     height: 280px;
     margin: 10% auto;
 }
+
+h4 {
+    font-weight: bold;
+    text-align: center;
+}
