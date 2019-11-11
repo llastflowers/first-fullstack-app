@@ -31,7 +31,7 @@ class MonsterDetailApp extends Component {
             console.log(err);
         }
         finally {
-            loading.update({ loading: true });
+            loading.update({ loading: false });
         }
     }
 
