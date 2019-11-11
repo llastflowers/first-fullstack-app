@@ -19,7 +19,7 @@ class MonsterDetailApp extends Component {
         const id = searchParams.get('id');
 
         if (!id) {
-            window.location = './monster-list/monster-list.html';
+            window.location = 'monster-list.html';
             return;
         }
 
