@@ -26,6 +26,7 @@ export async function addMonster(monster) {
     });
 
     const data = await response.json();
+    console.log(data);
     return data;
 }
 
