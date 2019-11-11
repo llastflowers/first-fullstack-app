@@ -204,23 +204,6 @@ ul {
     display: flex;
     justify-content: center;
 }
-/* 
-.loading-container {
-    width: 100px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.loading-container img {
-    width: 150px;
-    border-radius: 100%;
-    margin: 15% auto;
-    display: flex;
-    align-content: center;
-    opacity: 0.9;
-} */
 
 .loading {
     width: 150px;
@@ -229,4 +212,10 @@ ul {
     display: flex;
     align-content: center;
     opacity: 0.9;
+}
+
+.delete {
+    position: absolute;
+    bottom: 40px;
+    margin: 0 auto;
 }

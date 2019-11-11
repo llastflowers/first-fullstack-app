@@ -41,7 +41,7 @@ class MonsterDetailApp extends Component {
                 <!-- header goes here -->
                 <main>
                 </main>
-                <footer><button>Delete Monster</button></footer>
+                <footer><button id="delete">Delete Monster</button></footer>
             </div>
         `;
     }
