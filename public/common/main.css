@@ -204,3 +204,15 @@ ul {
     display: flex;
     justify-content: center;
 }
+
+.loading-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-container img {
+    width: 300px;
+    border-radius: 100%;
+}
