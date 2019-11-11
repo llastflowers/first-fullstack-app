@@ -215,7 +215,6 @@ ul {
 }
 
 .delete {
-    position: absolute;
-    bottom: 40px;
-    margin: 0 auto;
+    width: 250px;
+    margin: 10% auto;
 }
