@@ -1,7 +1,7 @@
 import Component from '../Component.js';
 import Header from '../common/Header.js';
 import MonsterList from './MonsterList.js';
-import { getMonsters } from '../services/monsters-api.js';
+import { getMonsters } from '../services/monsters-api.js'; 
 
 class MonsterListApp extends Component {
 
