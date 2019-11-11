@@ -17,7 +17,7 @@ class MonsterForm extends Component {
 
             const monster = {
                 name: formData.get('name'),
-                alignment: formData.get('alignment'), //check that this is right
+                alignmentId: parseInt(formData.get('alignment')), //check that this is right
                 url: formData.get('url'), 
                 hp: parseInt(formData.get('hp')),
                 isLegendary: formData.get('is-legendary') === 'on'
