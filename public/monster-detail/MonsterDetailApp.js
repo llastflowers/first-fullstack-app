@@ -16,6 +16,7 @@ class MonsterDetailApp extends Component {
         //main.appendChild(loading.renderDOM());
 
         const searchParams = new URLSearchParams(window.location.search);
+        console.log (searchParams);
         const id = searchParams.get('id');
 
         if (!id) {
@@ -32,7 +33,7 @@ class MonsterDetailApp extends Component {
             console.log(err);
         }
         finally {
-            loading.update({ loading: false });
+            //loading.update({ loading: false });
         }
     }
 
