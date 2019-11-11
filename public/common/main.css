@@ -204,7 +204,7 @@ ul {
     display: flex;
     justify-content: center;
 }
-
+/* 
 .loading-container {
     width: 100px;
     position: absolute;
@@ -220,7 +220,7 @@ ul {
     display: flex;
     align-content: center;
     opacity: 0.9;
-}
+} */
 
 .loading {
     width: 150px;
