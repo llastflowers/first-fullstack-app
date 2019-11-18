@@ -33,7 +33,7 @@ app.get('/api/monsters', async(req, res) => {
             a.*
         FROM monsters m
         JOIN alignments a
-        ON   m.alignments_id = a.id
+        ON   m.id = a.id
         ORDER BY m.hp;
         `);
         
@@ -54,9 +54,8 @@ app.get('/api/monsters/:id', async(req, res) => {
     try {
         const result = await client.query(`
             SELECT
-                m.id, m.name, m.url, m.hp, 
-                m.is_legendary as "isLegendary",
-                a.id as "alignmentId", a.alignment
+                m.*,
+                a.*
             FROM monsters m
             JOIN alignments a
             ON   m.alignments_Id = a.id
