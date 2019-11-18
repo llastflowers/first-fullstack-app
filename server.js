@@ -27,14 +27,17 @@ app.get('/api/monsters', async(req, res) => {
 
     try {
         const result = await client.query(`
-        SELECT
-            m.id, m.name, m.url, m.hp, 
-            m.is_legendary as "isLegendary",
-            a.*
-        FROM monsters m
-        JOIN alignments a
-        ON   m.id = a.id
-        ORDER BY m.hp;
+            SELECT
+                m.id,
+                m.name,
+                m.url,
+                m.hp,
+                a.alignment as Alignment,
+				m.is_legendary as "isLegendary"
+            FROM monsters m
+			JOIN alignments a
+            ON   m.alignments_id = a.id
+            ORDER BY m.hp;
         `);
         
 
