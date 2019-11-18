@@ -213,3 +213,18 @@ ul {
     align-content: center;
     opacity: 0.9;
 }
+
+.detail {
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 20px;
+    width: 400px;
+    height: 260px;
+    margin: 10% auto;
+}
+
+h4 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1% auto;
+}

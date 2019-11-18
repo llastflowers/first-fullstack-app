@@ -39,7 +39,8 @@ class MonsterDetailApp extends Component {
         return /*html*/`
             <div>
                 <!-- header goes here -->
-                <main>
+                <main class="detail">
+                    <h4>Monster Detail</h4>
                 </main>
             </div>
         `;
